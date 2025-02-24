@@ -18,7 +18,7 @@
  *    shallowCopy({}) => {}
  */
 function shallowCopy(obj) {
-  return Object.assign({}, obj);
+  return { ...obj };
 }
 
 /**
@@ -167,7 +167,7 @@ function Rectangle(width, height) {
     width: { value: width },
     height: { value: height },
     getArea: {
-      value: function () {
+      value() {
         return this.width * this.height;
       },
     },
